@@ -16,10 +16,15 @@ public class obstacle : MonoBehaviour
     {
         transform.Translate(Vector3.forward*speed*Time.deltaTime);
 
+        if(transform.position.z<-30)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     private void OnBecameInvisible()
     {
-        Destroy(gameObject);
+       
     }
 }
